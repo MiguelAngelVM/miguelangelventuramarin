@@ -113,12 +113,10 @@ h1{font-size:clamp(2.6rem,5.6vw,5rem);line-height:.98;letter-spacing:-.04em;font
 .proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
 .pj{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);transition:.35s}
 .pj:hover{transform:translateY(-8px);border-color:var(--c)}
-.pj .im{height:180px;background-size:cover;background-position:top;filter:grayscale(.7) brightness(.8);transition:.5s}
-.pj:hover .im{filter:none;transform:scale(1.05)}
-.pj .im-w{overflow:hidden}
 .pj .bd{padding:22px}
 .pj h3{font-size:1.2rem}
 .pj p{color:#aab0c8;font-size:.92rem;margin:8px 0 12px}
+.pj .meta{display:inline-block;font-family:var(--mono);font-size:.7rem;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
 .pj a{font-family:var(--mono);font-size:.78rem;color:var(--b)}
 
 /* skills */
@@ -320,32 +318,38 @@ footer q{display:block;margin-bottom:8px;color:#c4c9dc}
   <h2>Lo que construyo: <span class="g">trazabilidad.digital</span></h2>
   <p class="lead rv" style="margin:-20px 0 40px">Cinco SaaS para logística, comercio exterior y transporte, nacidos de sistemas reales que operan hoy para clientes del sector.</p>
   <div class="c3 c9">
-    <div class="card rv"><span class="ico">📦</span><h3>CargoHub Digital</h3><p>Embarques marítimos FCL/LCL para forwarders y consolidadoras. El cliente recibe avisos automáticos por WhatsApp y correo, con alertas de demurrage, margen por embarque, CFDI 4.0 y portal de tracking.</p><span class="st">SaaS · en construcción</span></div>
-    <div class="card rv"><span class="ico">🚛</span><h3>Flota Digital</h3><p>TMS para transportistas: viajes, Carta Porte 3.1 y CFDI 4.0, mantenimiento, apps de operador y de cliente, y un asistente de IA. Es el más maduro de la familia.</p><span class="st">SaaS · el más avanzado</span></div>
-    <div class="card rv"><span class="ico">🏗️</span><h3>Recinto Digital</h3><p>WMS para almacenes, patios y recintos fiscalizados: entradas, salidas y movimientos de inventario, solicitudes de servicio, tarifas y facturación. Parte del dominio de Refepa.</p><span class="st">SaaS · en construcción</span></div>
-    <div class="card rv"><span class="ico">🧠</span><h3>Mercancía Digital</h3><p>IA para clasificación arancelaria: busca entre las 8,122 fracciones de la TIGIE y sugiere la correcta con su explicación. Una persona confirma. Motor en Python con LangGraph y Claude.</p><span class="st">SaaS · en construcción</span></div>
-    <div class="card rv"><span class="ico">🧾</span><h3>Timbrado Digital</h3><p>Facturación electrónica CFDI 4.0 para cualquier empresa de México: timbrado con PAC, cancelación, complementos de pago, carta porte y nómina, también por API.</p><span class="st">SaaS · en construcción</span></div>
-    <div class="card rv"><span class="ico">🚢</span><h3>LCL Ports</h3><p>Plataforma operativa de una consolidadora de carga LCL: consolidados, contenedores y houses, transporte terrestre, finanzas con CFDI y cotizaciones. Incluye app móvil de tracking para clientes.</p><span class="st">Cliente · en operación</span></div>
-    <div class="card rv"><span class="ico">🏭</span><h3>Refepa</h3><p>Sistema de un recinto fiscalizado estratégico: entradas, salidas, maniobras, inventario y ubicaciones, permisos de acceso, autotransportes y facturación. Con app móvil para patio y bodega.</p><span class="st">Cliente · en operación</span></div>
+    <div class="card rv"><span class="ico">📦</span><h3>CargoHub Digital</h3><p>Embarques marítimos FCL/LCL para forwarders y consolidadoras. El cliente recibe avisos automáticos por WhatsApp y correo, con alertas de demurrage, margen por embarque, CFDI 4.0 y portal de tracking.</p><span class="st">SaaS</span></div>
+    <div class="card rv"><span class="ico">🚛</span><h3>Flota Digital</h3><p>TMS para transportistas: viajes, Carta Porte 3.1 y CFDI 4.0, mantenimiento, apps de operador y de cliente, y un asistente de IA. Es el más maduro de la familia.</p><span class="st">SaaS · TMS · Carta Porte</span></div>
+    <div class="card rv"><span class="ico">🏗️</span><h3>Recinto Digital</h3><p>WMS para almacenes, patios y recintos fiscalizados: entradas, salidas y movimientos de inventario, solicitudes de servicio, tarifas y facturación. Parte del dominio de Refepa.</p><span class="st">SaaS</span></div>
+    <div class="card rv"><span class="ico">🧠</span><h3>Mercancía Digital</h3><p>IA para clasificación arancelaria: busca entre las 8,122 fracciones de la TIGIE y sugiere la correcta con su explicación. Una persona confirma. Motor en Python con LangGraph y Claude.</p><span class="st">SaaS</span></div>
+    <div class="card rv"><span class="ico">🧾</span><h3>Timbrado Digital</h3><p>Facturación electrónica CFDI 4.0 para cualquier empresa de México: timbrado con PAC, cancelación, complementos de pago, carta porte y nómina, también por API.</p><span class="st">SaaS</span></div>
+    <div class="card rv"><span class="ico">🚢</span><h3>LCL Ports</h3><p>Plataforma operativa de una consolidadora de carga LCL: consolidados, contenedores y houses, transporte terrestre, finanzas con CFDI y cotizaciones. Incluye app móvil de tracking para clientes.</p><span class="st">Cliente · Laravel · Angular · SQL Server</span></div>
+    <div class="card rv"><span class="ico">🏭</span><h3>Refepa</h3><p>Sistema de un recinto fiscalizado estratégico: entradas, salidas, maniobras, inventario y ubicaciones, permisos de acceso, autotransportes y facturación. Con app móvil para patio y bodega.</p><span class="st">Cliente · RFE · web + móvil</span></div>
     <div class="card rv"><span class="ico">⛏️</span><h3>Mineral Cargo (MICA)</h3><p>Su sistema de operación en Manzanillo: solicitudes de servicio, inspección de contenedores (EIR) con daños, patio y almacén, y facturación CFDI. Le doy mantenimiento y desarrollo mejoras continuas.</p><span class="st">Cliente · soporte y evolución</span></div>
     <div class="card rv"><span class="ico">📍</span><h3>Alta Stockman</h3><p>Control de inventario en bodega: tarjas, entradas y salidas con fotos, ubicaciones, catálogo IMDG de mercancía peligrosa y notificaciones push. Web y app móvil.</p><span class="st">Cliente · web + móvil</span></div>
   </div>
 </section>
 
 <section id="proyectos">
-  <span class="tag">// en producción</span>
+  <span class="tag">// proyectos</span>
   <h2>Cosas que <span class="g">funcionan</span> de verdad.</h2>
-  <div class="c3">
-    <div class="pj rv"><div class="im-w"><div class="im" style="background-image:url('img/portfolio/refis.jpeg')"></div></div>
-      <div class="bd"><h3>Refis 360</h3><p>Servicios, clientes y CFDI de la terminal portuaria TAP.</p><a target="_blank" rel="noopener" href="http://refis360.tapterminal.com">refis360.tapterminal.com ↗</a></div></div>
-    <div class="pj rv"><div class="im-w"><div class="im" style="background-image:url('img/portfolio/RefisMovil.jpeg')"></div></div>
-      <div class="bd"><h3>Refis Móvil</h3><p>Ubicación de mercancía, estibas y control de daños.</p><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1cUZ-xKf9ZuispFH4pUto5gKDAQ8SAp93/view?usp=sharing">ver video ↗</a></div></div>
-    <div class="pj rv"><div class="im-w"><div class="im" style="background-image:url('img/portfolio/mbvm.png')"></div></div>
-      <div class="bd"><h3>MBV Móvil</h3><p>Pesaje de contenedores en sitio, conforme a la norma MBV.</p><a target="_blank" rel="noopener" href="http://mbvmovil.com/">mbvmovil.com ↗</a></div></div>
-    <div class="pj rv"><div class="im-w"><div class="im" style="background-image:url('img/portfolio/contecon.png')"></div></div>
-      <div class="bd"><h3>Contecon · ISCS</h3><p>Servicios en línea de la terminal Contecon Manzanillo.</p><a target="_blank" rel="noopener" href="https://iscs.contecon.mx/apl/sist/sist-inse/inicio-de-sesion/">iscs.contecon.mx ↗</a></div></div>
-    <div class="pj rv"><div class="bd"><h3>Logística Tracking</h3><p>Trazabilidad web y móvil de mercancía para Logística Multimodal Especializada.</p><a target="_blank" rel="noopener" href="http://one.logisticamultimodal.com/">one.logisticamultimodal.com ↗</a></div></div>
-    <div class="pj rv"><div class="bd"><h3>Piddelo</h3><p>Pedidos, recargas y pago de servicios desde el móvil, con app de repartidor.</p><a target="_blank" rel="noopener" href="https://piddelo.com/">piddelo.com ↗</a></div></div>
+  <div class="c4">
+    <div class="pj rv"><div class="bd"><h3>Refis 360</h3><p>Servicios, clientes y CFDI de la terminal portuaria TAP.</p><span class="meta">Terminal portuaria · Angular · Laravel</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Refis Móvil</h3><p>Ubicación de mercancía, estibas y control de daños.</p><span class="meta">Almacén · React Native</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>MBV Móvil</h3><p>Pesaje de contenedores en sitio, conforme a la norma MBV.</p><span class="meta">Pesaje de contenedores</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Contecon · ISCS</h3><p>Servicios en línea de la terminal Contecon Manzanillo.</p><span class="meta">Terminal portuaria</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Logística Tracking</h3><p>Trazabilidad web y móvil de mercancía para Logística Multimodal Especializada.</p><span class="meta">Transporte · Laravel · Angular · React Native</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Piddelo</h3><p>Pedidos, recargas y pago de servicios desde el móvil, con app de repartidor.</p><span class="meta">App móvil · Laravel · React Native</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Aeroméxico App 2.0</h3><p>Migración de la app 1.x a la 2.0 desde cero: arquitectura, check-in completo hasta el pase de abordar, IROPS, modificaciones y reembolsos.</p><span class="meta">Aviación · Softtek</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Multimodal ONE</h3><p>Gestión de viajes de un transportista: cotizaciones, gastos de trayecto, cartas porte y timbrado de facturas.</p><span class="meta">Transporte · Laravel</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Save Consultores</h3><p>Panel web con KPIs y PDFs automáticos, app iOS offline con QR y fotos, y Python para leer exámenes marcados.</p><span class="meta">Protección civil · Laravel · Python</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Riing</h3><p>Aplicación para realizar trámites de Telcel desde casa con respuesta inmediata.</p><span class="meta">eCommerce · Programmer City</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Puerto de Ensenada</h3><p>Sistema de papeles para la Administración Portuaria Integral de Ensenada.</p><span class="meta">Puertos · 2016</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Nowports</h3><p>Software del agente de carga digital: logística con herramientas financieras para mover carga de forma transparente.</p><span class="meta">Logística · Fintech</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Ganador Digital</h3><p>Plataforma SaaS multitenancy de rifas digitales: cada organizador tiene su subdominio y los compradores participan en rifas de cualquier organizador.</p><span class="meta">SaaS · Laravel 10 · Angular 14</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Refepa One Solution</h3><p>Administración de un recinto fiscalizado estratégico: bitácoras de acceso, servicios de operadores, inventario en tiempo real, facturación y estadística.</p><span class="meta">Recinto fiscalizado · SQL Server</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>LCL Ports</h3><p>Consolidados, contenedores y houses, transporte terrestre, pricing y facturación de una consolidadora de carga LCL, con app móvil de tracking.</p><span class="meta">Logística · web + móvil</span></div></div>
+    <div class="pj rv"><div class="bd"><h3>Alta Stockman</h3><p>Inventario de bodega con tarjas, entradas y salidas con fotos, ubicaciones, catálogo IMDG y notificaciones push.</p><span class="meta">Almacén · web + React Native</span></div></div>
   </div>
 </section>
 
